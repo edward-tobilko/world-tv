@@ -1,0 +1,49 @@
+@import "../../vars.scss";
+
+.search__menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  z-index: 2;
+
+  background: $darkColor;
+  max-height: 500px;
+  overflow: auto;
+  width: 100%;
+  &-loading {
+    background: $darkColor;
+    text-align: center;
+    &__icon {
+      width: 30px;
+    }
+  }
+  &-list {
+    padding: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    &:hover {
+      background: $darkLightColor;
+    }
+    &__img {
+      width: 45px;
+    }
+    &__desc {
+      padding-left: 10px;
+      h4 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 13px;
+        color: $textColor;
+        padding-top: 5px;
+      }
+    }
+    &:hover h4 {
+      color: $activeTextColor;
+    }
+  }
+}

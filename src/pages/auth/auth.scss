@@ -1,0 +1,149 @@
+@import "../../vars.scss";
+
+.auth {
+  position: relative;
+  height: 100vh;
+  &__form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+
+    width: 600px;
+    padding: 40px 25px;
+    border: 1px solid $activeTextColor;
+    box-shadow: 0px 0px 20px 10px $darkColor;
+    border-radius: 15px;
+    &-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &-container {
+      max-width: 600px;
+      width: 100%;
+      &-title {
+        font-size: $semiFontSize;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        text-align: center;
+        margin: 20px 0;
+      }
+      &-field {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px auto;
+        label {
+          letter-spacing: 2px;
+        }
+        &:last-child {
+          flex-direction: row-reverse;
+          justify-content: center;
+        }
+        &-input {
+          width: 80%;
+          background: $darkColor;
+          border: none;
+          padding: 12px 25px;
+          color: $whiteColor;
+          margin-top: 7px;
+        }
+        .psw {
+          letter-spacing: 1px;
+          font-size: $normalFontSize;
+          a {
+            color: $greenColor;
+            text-decoration: none;
+            font-size: $smallFontSize;
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+        &-login {
+          background: radial-gradient(
+              192.53% 1041.23% at 0 12%,
+              rgba(255, 255, 255, 0.5) 0,
+              rgba(255, 255, 255, 0) 34.03%
+            ),
+            #20bcc6;
+          box-shadow: 0 0 18px #20bcc6;
+          max-width: 130px;
+          width: 100%;
+          border: none;
+          border-radius: 20px;
+          color: $whiteColor;
+          padding: 10px 20px;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}
+
+// Media
+@media screen and (max-width: $breakpoint768) {
+  .auth__form {
+    max-width: 400px;
+    width: 100%;
+  }
+  .auth__form-container-title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: $breakpoint576) {
+  .auth__form {
+    max-width: 300px;
+    padding: 20px 10px;
+  }
+  .auth__form-container-title {
+    font-size: 20px;
+  }
+  .auth__form-container-field-input {
+    padding: 7px 10px;
+  }
+  .auth__form-container-field-login {
+    max-width: 100px;
+  }
+  .auth__form-container-field label {
+    display: flex;
+    align-items: center;
+    letter-spacing: 1px;
+  }
+  .auth__form-container-field label span {
+    font-size: 12px;
+    padding-left: 5px;
+  }
+}
+
+@media screen and (max-width: $breakpoint420) {
+  .header-logo-subtitle {
+    margin: 10px 0 0 7px;
+  }
+}
+
+@media screen and (max-width: $breakpoint320) {
+  .auth__form {
+    max-width: 250px;
+    padding: 20px 10px;
+  }
+  .auth__form-container-title {
+    margin: 10px 0 !important;
+  }
+  .auth__form-container-field {
+    margin: 15px auto;
+  }
+  .auth__form-container-field .psw {
+    font-size: 14px;
+  }
+  .auth__form-container-field .psw a {
+    font-size: 12px;
+  }
+  .auth__form-container-field-login {
+    padding: 7px 10px;
+    max-width: 80px;
+  }
+}

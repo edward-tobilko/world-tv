@@ -1,0 +1,282 @@
+@import "../../vars.scss";
+
+.footer {
+  background: $darkColor;
+  padding: 40px 20px;
+  &__container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr auto 1fr;
+    justify-items: center;
+    gap: 30px;
+
+    .sections {
+      &-title {
+        font-size: $normalFontSize;
+        letter-spacing: 1px;
+        color: $whiteColor;
+      }
+      &__menu {
+        &-list {
+          font-size: $smallFontSize;
+          margin: 3px 0;
+        }
+        &-link {
+          color: $textColor;
+          text-decoration: none;
+          &:hover {
+            color: $whiteColor;
+          }
+        }
+      }
+    }
+
+    .about__company {
+      &-title {
+        font-size: $normalFontSize;
+        letter-spacing: 1px;
+        color: $whiteColor;
+      }
+      &-menu {
+        &-list {
+          font-size: $smallFontSize;
+          margin: 3px 0;
+        }
+        &-link {
+          text-decoration: none;
+          color: $textColor;
+          &:hover {
+            color: $whiteColor;
+          }
+        }
+      }
+    }
+
+    .address {
+      &-title {
+        font-size: $normalFontSize;
+        color: $whiteColor;
+        letter-spacing: 1px;
+      }
+      &-subtitle {
+        margin-top: 7px;
+        color: $textColor;
+        letter-spacing: 1px;
+        text-decoration: none;
+        &:hover {
+          color: $whiteColor;
+        }
+      }
+    }
+
+    .support {
+      &-suptitle {
+        font-size: $normalFontSize;
+        color: $whiteColor;
+        letter-spacing: 1px;
+      }
+      &-title {
+        font-size: $smallFontSize;
+        margin: 5px 0 !important;
+      }
+      &-subtitle {
+        color: $textColor;
+        text-decoration: none;
+        font-size: 14px;
+        &:hover {
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 30px;
+    padding: 30px 20px;
+    justify-items: center;
+
+    &-apps {
+      &__title {
+        font-size: $normalFontSize;
+        letter-spacing: 1px;
+        color: $whiteColor;
+        margin-bottom: 15px !important;
+      }
+      &__menu {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        &-list {
+          display: flex;
+          align-items: center;
+          background: $contentColor;
+          padding: 10px 20px;
+          border-radius: 10px;
+        }
+        &-icon {
+          font-size: 32px;
+          margin-right: 7px;
+        }
+        &-desc {
+          &-title {
+            font-size: 11px;
+            text-transform: uppercase;
+            color: $textColor;
+          }
+          &-link {
+            text-decoration: none;
+            color: $whiteColor;
+            font-size: $normalFontSize;
+            &:hover {
+              color: $activeTextColor;
+            }
+          }
+        }
+      }
+    }
+
+    &-social {
+      &__title {
+        font-size: $normalFontSize;
+        letter-spacing: 1px;
+        color: $whiteColor;
+        margin-bottom: 15px !important;
+      }
+      &__menu {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        justify-items: center;
+        gap: 15px;
+        &-list {
+          background: $contentColor;
+          padding: 15px;
+          border-radius: 50%;
+          &:hover {
+            background: $darkLightColor;
+          }
+        }
+        &-link {
+          display: flex;
+          align-items: center;
+          color: $whiteColor;
+          font-size: $semiFontSize;
+        }
+      }
+    }
+  }
+
+  &__copyright {
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    color: $textColor;
+    &-title {
+      font-size: 17px;
+      margin-left: 7px;
+    }
+  }
+}
+
+// Media
+@media screen and (max-width: $breakpoint1440) {
+  .footer__footer-apps__menu-list {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: $breakpoint1200) {
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer__footer-apps__menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: $breakpoint992) {
+  .footer__footer-social__menu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: $breakpoint768) {
+  .container {
+    padding: 0 20px;
+  }
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .sections {
+    text-align: center;
+  }
+  .about__company {
+    text-align: center;
+  }
+  .support {
+    text-align: center;
+  }
+  .address {
+    text-align: center;
+  }
+  .footer__footer {
+    padding: 15px 5px;
+    gap: 15px;
+  }
+  .footer__footer-apps__title {
+    font-size: 17px;
+    text-align: center;
+  }
+  .footer__footer-apps__menu {
+    gap: 10px;
+  }
+  .footer__footer-apps__menu-icon {
+    font-size: 20px;
+  }
+  .footer__footer-apps__menu-desc-link {
+    font-size: 15px;
+  }
+  .footer__footer-social__title {
+    font-size: 17px;
+    text-align: center;
+  }
+  .footer__footer-social__menu-link {
+    font-size: 18px;
+  }
+  .footer__footer-social__menu-list {
+    padding: 12px;
+  }
+  .footer__footer-social__menu {
+    grid-template-columns: repeat(3, 0.2fr);
+    justify-content: center;
+  }
+  .footer__copyright-title {
+    font-size: 13px;
+  }
+}
+
+@media screen and (max-width: $breakpoint576) {
+  .footer__container {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  .footer__footer {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .footer__copyright {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint420) {
+  .footer__copyright-title {
+    font-size: 11px;
+  }
+  .footer__footer-apps__menu-desc-link {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,616 @@
+@import "../../vars.scss";
+
+// Home
+.home {
+  height: 90vh;
+  position: relative;
+  &__background {
+    position: relative;
+    height: inherit;
+    overflow: hidden;
+    box-shadow: 0px 0px 17px 17px $darkLightColor;
+    video {
+      position: absolute;
+      top: -150px;
+      left: 0;
+      z-index: -1;
+
+      object-fit: cover;
+      max-width: 100%;
+      width: 100%;
+      opacity: 0.7;
+      height: 150%;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    max-width: 720px;
+    &-title {
+      font-size: 45px;
+      color: $whiteColor;
+      font-weight: $boldFont;
+      letter-spacing: 2px;
+      line-height: 45px;
+    }
+    &-menu {
+      margin: 20px 0 !important;
+      &-list {
+        position: relative;
+        font-size: $semiFontSize;
+        font-weight: $semiBoldFont;
+        letter-spacing: 1px;
+        padding-left: 50px;
+        margin-bottom: 10px !important;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 20px;
+          transform: translateY(-50%);
+
+          width: 15px;
+          height: 15px;
+          background-color: $greenColor;
+          border-radius: 50%;
+        }
+      }
+    }
+    &-subtitle {
+      max-width: 600px;
+      font-size: $bigFontSize;
+      font-weight: $semiBoldFont;
+      letter-spacing: 1px;
+      line-height: 40px;
+    }
+    &-gadgets {
+      display: grid;
+      grid-template-columns: repeat(4, 0.2fr);
+      justify-items: center;
+      margin: 30px 0 !important;
+      &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        i {
+          font-size: 40px;
+        }
+        span {
+          font-size: $normalFontSize;
+          font-weight: $semiBoldFont;
+          text-transform: uppercase;
+          margin-top: 7px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+
+    &-footer {
+      position: relative;
+      &-btn {
+        width: 380px;
+        padding: 17px 20px 17px 20px;
+        border-radius: 40px;
+        background: radial-gradient(
+            192.53% 1041.23% at 0 12%,
+            rgba(255, 255, 255, 0.5) 0,
+            rgba(255, 255, 255, 0) 34.03%
+          ),
+          #20bcc6;
+        box-shadow: 0 0 18px #20bcc6;
+        border: none;
+        color: $whiteColor;
+        font-size: $semiFontSize;
+        letter-spacing: 1px;
+        text-align: end;
+      }
+      &-img {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+      }
+    }
+  }
+}
+
+// Television
+.television {
+  &-title {
+    font-size: 45px;
+    font-weight: $semiBoldFont;
+    margin-bottom: 50px !important;
+    margin-top: 80px;
+    span {
+      color: $greenColor;
+    }
+  }
+  &__container {
+    position: relative;
+    min-height: 550px;
+    &-content {
+      &-title {
+        display: flex;
+        align-items: center;
+        font-size: 32px;
+        font-weight: $semiBoldFont;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        i {
+          font-weight: $extraLightFont;
+          font-size: $semiFontSize;
+          padding: 7px;
+          background: $activeTextColor;
+          margin: 0 10px;
+          border-radius: 5px;
+        }
+      }
+    }
+    &-menu {
+      display: grid;
+      grid-template-rows: repeat(4, 1fr);
+      gap: 10px;
+      &-title {
+        font-size: $normalFontSize;
+        font-weight: $mediumFont;
+      }
+      &-subtitle {
+        font-size: 15px;
+        color: $textColor;
+      }
+    }
+    &-img {
+      position: absolute;
+      bottom: 0;
+      right: -70px;
+      z-index: -1;
+
+      width: 700px;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+// Cartoons
+.cartoons {
+  padding: 50px 40px;
+  &__content {
+    display: grid;
+    grid-template-columns: 0.5fr auto;
+    gap: 80px;
+    align-items: center;
+    &-img {
+      position: relative;
+      .light__effect-cartoons {
+        position: absolute;
+        top: 20px;
+        right: -30px;
+        z-index: -1;
+
+        width: 300px;
+        height: 300px;
+        background: #20bbc6;
+        box-shadow: 0 0 80px 120px #20bbc6;
+        border-radius: 50%;
+        opacity: 0.5;
+      }
+      &-mac {
+        width: 700px;
+      }
+      &-bird {
+        position: absolute;
+        bottom: 178px;
+        right: -50px;
+      }
+    }
+    &-desc {
+      display: flex;
+      flex-direction: column;
+      max-width: 500px;
+      width: 100%;
+      overflow: hidden;
+      &-cartoons {
+        max-width: 500px;
+        margin: 20px 0;
+        font-size: $normalFontSize;
+        line-height: 35px;
+        letter-spacing: 1px;
+      }
+      &-brands {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        justify-items: center;
+        gap: 50px;
+        margin-top: 30px;
+
+        animation: slideBrandIcons 20s linear infinite;
+      }
+    }
+  }
+}
+
+// Films
+.films {
+  display: flex;
+  padding-top: 100px;
+  position: relative;
+  &__container {
+    max-width: 600px;
+    width: 100%;
+    overflow: hidden;
+  }
+}
+
+.light__effect-films {
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: -1;
+
+  width: 170px;
+  height: 170px;
+  background: #20bbc6;
+  box-shadow: 0 0 100px 150px #20bbc6;
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+// Important
+.important {
+  padding: 50px 40px 100px 40px;
+  &__title {
+    text-align: center;
+    font-size: $bigFontSize;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+// Media
+@media screen and (max-width: $breakpoint1440) {
+  // Home
+  .home__background video {
+    top: -160px;
+  }
+}
+
+@media screen and (max-width: $breakpoint1200) {
+  // Television
+  .television__container-img {
+    width: 600px;
+    right: 0;
+    bottom: 110px;
+  }
+
+  // Cartoons
+  .cartoons__content-img-mac {
+    width: 600px;
+  }
+  .cartoons__content {
+    gap: 55px;
+  }
+  .television__container-content-title {
+    font-size: 28px;
+  }
+  .television__container-content-title i {
+    font-size: 20px;
+  }
+  .cartoons__content-img-bird {
+    bottom: 152px;
+  }
+
+  // Films
+  .films__img {
+    width: 500px;
+  }
+  .light__effect-films {
+    width: 140px;
+    height: 140px;
+  }
+  .television__container-content {
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: $breakpoint992) {
+  // Home
+  .home__content-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .home__content-menu-list {
+    font-size: 18px;
+    margin-bottom: 5px !important;
+  }
+  .home__content-subtitle {
+    line-height: 30px;
+    font-size: 25px;
+  }
+  .home__content-gadgets-list i {
+    font-size: 30px;
+  }
+  .home__content-gadgets-list span {
+    font-size: 14px;
+  }
+  .home__content-footer-btn {
+    font-size: 21px;
+    width: 340px;
+  }
+  .home__content {
+    max-width: 480px;
+  }
+
+  // Television
+  .television-title {
+    font-size: 30px;
+    margin-top: 40px;
+    margin-bottom: 15px !important;
+  }
+  .television__container-img {
+    width: 450px;
+    top: 50px;
+    transform: rotate(54deg);
+  }
+  .television__container-content-title {
+    font-size: 25px;
+  }
+  .television__container-menu {
+    max-width: 400px;
+    width: 100%;
+    grid-template-rows: repeat(4, 0.5fr);
+  }
+  .television__container-menu-title {
+    font-size: 15px;
+  }
+  .television__container-menu-subtitle {
+    font-size: 13px;
+  }
+  .television__container {
+    min-height: 450px;
+  }
+
+  // Cartoons
+  .cartoons__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cartoons__content-img-mac {
+    width: 520px;
+  }
+  .title__cartoon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cartoons__content-img-bird {
+    bottom: 132px;
+  }
+  .cartoons {
+    padding: 20px;
+  }
+
+  // Films
+  .films {
+    flex-direction: column;
+    align-items: center;
+  }
+  .films__img {
+    width: 400px;
+  }
+  .light__effect-films {
+    top: 50%;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media screen and (max-width: $breakpoint768) {
+  // Television
+  .television__container-img {
+    width: 350px;
+    opacity: 0.5;
+  }
+  .television-title {
+    font-size: 25px;
+  }
+  .television__container-content-title {
+    font-size: 22px;
+  }
+  .television__container-content-title i {
+    font-size: 16px;
+  }
+  .television__container {
+    min-height: 380px;
+  }
+
+  // Important
+  .important__title {
+    font-size: 24px;
+  }
+
+  // Cartoons
+  .cartoons__content-img .light__effect-cartoons {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 60px 100px #20bbc6;
+    right: 0;
+  }
+}
+
+@media screen and (max-width: $breakpoint576) {
+  // Home
+  .home__content-title {
+    font-size: 23px;
+    line-height: 30px;
+  }
+  .home__content-menu-list {
+    font-size: 14px;
+    margin-bottom: 5px !important;
+  }
+  .home__content-subtitle {
+    line-height: 25px;
+    font-size: 18px;
+  }
+  .home__content-footer-btn {
+    font-size: 17px;
+    width: 300px;
+  }
+  .home__content {
+    max-width: 320px;
+  }
+  .home__content-menu {
+    margin: 10px 0 !important;
+  }
+  .home__content-gadgets {
+    margin: 20px 0 !important;
+    grid-template-columns: repeat(4, 0.3fr);
+  }
+
+  // Television
+  .television-title {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 20px;
+  }
+  .television__container-content-title {
+    font-size: 19px;
+  }
+  .television__container-menu {
+    max-width: 310px;
+  }
+
+  // Cartoons
+  .cartoons__content-desc-cartoons {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .cartoons__content-img-mac {
+    width: 440px;
+  }
+  .cartoons__content-img-bird {
+    width: 200px;
+    bottom: 111px;
+    right: -15px;
+  }
+  .cartoons__content-img .light__effect-cartoons {
+    right: 0;
+    width: 150px;
+    height: 150px;
+  }
+  .subscription__item-name {
+    display: none;
+  }
+
+  // Films
+  .light__effect-films {
+    box-shadow: 0 0 100px 120px #20bbc6;
+  }
+
+  // Important
+  .important__title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: $breakpoint420) {
+  // Home
+  .home__content-footer-btn {
+    font-size: 15px;
+    width: 270px;
+  }
+  .home__content {
+    left: 20px;
+  }
+  .home__content-footer-img {
+    left: 12px;
+  }
+
+  // Cartoons
+  .cartoons__content-img-mac {
+    width: 350px;
+  }
+  .cartoons__content-img-bird {
+    width: 120px;
+    bottom: 89px;
+    right: 25px;
+  }
+  .cartoons__content-desc-cartoons {
+    font-size: 14px;
+    line-height: 26px;
+  }
+  .cartoons__content-desc-brands {
+    gap: 25px;
+    margin-top: 20px;
+  }
+  .cartoons__content-img .light__effect-cartoons {
+    width: 80px;
+    height: 80px;
+    box-shadow: 0 0 50px 70px #20bbc6;
+  }
+
+  // Films
+  .films__img {
+    width: 320px;
+  }
+  .light__effect-films {
+    box-shadow: 0 0 40px 70px #20bbc6;
+  }
+
+  // Important
+  .important__title {
+    font-size: 17px;
+  }
+
+  // Television
+  .television-title {
+    margin: 40px 0 !important;
+  }
+}
+
+@media screen and (max-width: $breakpoint320) {
+  // Home
+  .home__content-title {
+    font-size: 21px;
+    line-height: 27px;
+  }
+
+  // Television
+  .television__container-img {
+    width: 300px;
+    top: 100px;
+  }
+
+  // Cartoons
+  .cartoons__content-img-mac {
+    width: 300px;
+  }
+  .cartoons__content-img-bird {
+    bottom: 75px;
+    width: 100px;
+  }
+}
+
+// Animations
+@keyframes slideBrandIcons {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-130%);
+  }
+}
+
+@keyframes showAccordion {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

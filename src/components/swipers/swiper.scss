@@ -1,0 +1,137 @@
+@import "../../vars.scss";
+
+// MovieSwiper
+.movie__swiper {
+  overflow: visible !important;
+  &-item {
+    height: 400px !important;
+    width: 100% !important;
+    background-position: center !important;
+    background-size: cover !important;
+    &__img {
+      border-radius: 7px;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+.swiper-pagination-bullet {
+  width: 15px !important;
+  height: 15px !important;
+  background: $whiteColor;
+  opacity: 0.7 !important;
+}
+.swiper-pagination-bullet-active {
+  background: $activeTextColor;
+}
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+  left: -50px !important;
+  padding: 4px 7px;
+  &:hover {
+    background: $darkLightColor;
+    color: $activeTextColor;
+    border-radius: 7px;
+    opacity: 0.9;
+  }
+}
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+  right: -50px !important;
+  padding: 4px 7px;
+  &:hover {
+    background: $darkLightColor;
+    color: $activeTextColor;
+    border-radius: 7px;
+    opacity: 0.9;
+  }
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: $semiFontSize !important;
+}
+
+// MovieDetailsSwiper
+.movie__details-swiper {
+  margin: 50px 0 !important;
+  &__item {
+    width: 300px !important;
+    height: 300px !important;
+    display: flex !important;
+    justify-content: center !important;
+    img {
+      width: 100%;
+      transform-origin: center;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 20px;
+    }
+  }
+}
+
+// TvShowsSwiper
+.tvshows__swiper {
+  width: 100% !important;
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+
+  &-item {
+    width: 430px !important;
+    height: 300px !important;
+    background-position: center !important;
+    background-size: cover !important;
+    &__img {
+      display: block !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
+  }
+}
+
+// Media
+@media screen and (max-width: $breakpoint768) {
+  // MovieSwiper
+  .filmsPage__title {
+    font-size: 23px;
+    padding-bottom: 10px !important;
+  }
+  .movie__swiper-item {
+    height: 230px !important;
+  }
+  .tvshows__swiper {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+@media screen and (max-width: $breakpoint576) {
+  // TvShowsSwiper
+  .tvshows__swiper {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  // MovieDetailsSwiper
+  .movie__details-swiper__item {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: $breakpoint420) {
+  // MovieSwiper
+  .movie__swiper-item {
+    height: 150px !important;
+  }
+  .filmsPage__title {
+    font-size: 17px;
+    padding-bottom: 7px !important;
+  }
+}
+
+@media screen and (max-width: $breakpoint320) {
+  // MovieSwiper
+  .filmsPage__title {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,185 @@
+@import "../../vars.scss";
+
+.subscription {
+  padding: 100px 0px 50px 0px;
+  background: $darkLightColor;
+  &__item {
+    display: flex;
+    align-items: center;
+    &-name {
+      width: 500px;
+      padding-right: 30px;
+      h1 {
+        font-size: $bigFontSize;
+        font-weight: $boldFont;
+        letter-spacing: 1.5px;
+      }
+      h5 {
+        font-size: 21px;
+      }
+      p {
+        font-size: $smallFontSize;
+        color: $textColor;
+      }
+    }
+    &-list {
+      padding: 25px 15px;
+      width: 236px;
+      font-size: 24px;
+      text-align: center;
+      &:nth-child(3) {
+        background: $contentColor;
+      }
+      &-package {
+        font-size: 50px;
+        font-weight: $semiBoldFont;
+        line-height: 40px;
+      }
+      &-price {
+        font-size: 17px;
+        font-weight: $semiBoldFont;
+        letter-spacing: 1px;
+      }
+      &-oldprice {
+        font-size: $smallFontSize;
+        color: $textColor;
+        text-decoration: line-through;
+      }
+      &-btn {
+        background: inherit;
+        color: $whiteColor;
+        padding: 10px 30px;
+        border-radius: 20px;
+        border: 1px solid $whiteColor;
+        margin-top: 20px;
+        letter-spacing: 0.5px;
+        font-size: $smallFontSize;
+        &:hover {
+          background: $whiteColor;
+          color: $darkColor;
+        }
+      }
+      .try__free {
+        background: radial-gradient(
+            192.53% 1041.23% at 0 12%,
+            rgba(255, 255, 255, 0.5) 0,
+            rgba(255, 255, 255, 0) 34.03%
+          ),
+          #20bcc6;
+        box-shadow: 0 0 18px #20bcc6;
+        border: none;
+        &:hover {
+          color: inherit;
+          background: radial-gradient(
+              192.53% 1041.23% at 0 12%,
+              rgba(255, 255, 255, 0) 0,
+              rgba(255, 255, 255, 0.5) 34.03%
+            ),
+            #20bcc6;
+        }
+        &-btn {
+          display: none;
+        }
+      }
+    }
+    &-dot {
+      position: relative;
+      width: 20px;
+      height: 20px;
+      background: $greenColor;
+      border-radius: 50%;
+      margin: 0 auto;
+    }
+    .emptyDot {
+      background: $textColor;
+    }
+  }
+}
+
+// Media
+@media screen and (max-width: $breakpoint1200) {
+  .subscription__item-name p {
+    font-size: 12px;
+  }
+  .subscription__item-name h5 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: $breakpoint992) {
+  .subscription__item-name h1 {
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+  .subscription__item-list {
+    .try__free-btn {
+      display: block;
+    }
+    padding: 15px 5px;
+  }
+  .subscription__item-list-package {
+    font-size: 40px;
+  }
+  .subscription__item-list-price {
+    font-size: 14px;
+  }
+  .subscription__item-list-oldprice {
+    font-size: 12px;
+  }
+  .subscription__item-list-btn {
+    margin-top: 10px;
+    font-size: 13px;
+    letter-spacing: 0;
+    border-radius: 10px;
+  }
+
+  .subscription__item-name {
+    padding-right: 15px;
+  }
+  .subscription__item-name p {
+    display: none;
+  }
+  .subscription__item-name h5 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: $breakpoint768) {
+  .subscription {
+    padding: 50px 0;
+  }
+  .container {
+    padding: 0 20px;
+  }
+  .subscription__item-name {
+    width: 230px;
+    padding-right: 0;
+  }
+  .subscription__item-name h1 {
+    font-size: 22px;
+  }
+  .subscription__item-name h5 {
+    font-size: 12px;
+  }
+  .subscription__item-list {
+    font-size: 17px;
+    padding: 10px 5px;
+    width: 160px;
+  }
+  .subscription__item-list:nth-child(3) {
+    background: initial;
+  }
+  .subscription__item-list-btn {
+    padding: 7px 20px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: $breakpoint420) {
+  .subscription__item-list-package {
+    font-size: 30px;
+  }
+  .subscription__item-list-price {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,71 @@
+@use "sass:math";
+
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+$containerWidth: 1200px;
+$containerPadding: 40px;
+
+$breakpoint1440: 1440px;
+$breakpoint1200: 1200px;
+$breakpoint992: 992px;
+$breakpoint768: 768px;
+$breakpoint576: 576px;
+$breakpoint420: 420px;
+$breakpoint320: 320px;
+
+// Burger Menu
+$burgerBreakpoint: $breakpoint992;
+$burgerColor: "black";
+$burgerActiveColor: "white";
+
+// Fonts
+$fontMain: "EB Garamond", serif;
+$fontSecondary: "";
+
+// Colors
+$contentColor: #182936;
+$activeTextColor: #20bbc6;
+$textColor: rgba(255, 255, 255, 0.4);
+$whiteColor: #f2f2f2;
+$greenColor: #0fd884;
+$darkLightColor: #0b1e28;
+$darkColor: #061017;
+
+// Fonts Size
+$bigFontSize: 32px;
+$semiFontSize: 25px;
+$normalFontSize: 19px;
+$smallFontSize: 15px;
+
+// Fonts weight
+$thinFont: 100;
+$extraLightFont: 200;
+$lightFont: 300;
+$regularFont: 400;
+$mediumFont: 500;
+$semiBoldFont: 600;
+$boldFont: 700;
+$extraBoldFont: 800;
+$strongFont: 900;
+
+// Media
+@media screen and (max-width: $breakpoint1440) {
+}
+
+@media screen and (max-width: $breakpoint1200) {
+}
+
+@media screen and (max-width: $breakpoint992) {
+}
+
+@media screen and (max-width: $breakpoint768) {
+}
+
+@media screen and (max-width: $breakpoint576) {
+}
+
+@media screen and (max-width: $breakpoint420) {
+}
+
+@media screen and (max-width: $breakpoint320) {
+}

@@ -1,0 +1,48 @@
+@import "../../vars.scss";
+
+.movie__select {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 20px;
+  &-title {
+    font-size: $semiFontSize;
+    font-weight: $semiBoldFont;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  &-select {
+    padding: 10px 20px;
+    border-radius: 7px;
+    background: $darkLightColor;
+    border: none;
+    color: $whiteColor;
+    cursor: pointer;
+  }
+}
+
+// Media
+@media screen and (max-width: $breakpoint768) {
+  .movie__select {
+    padding: 30px 10px;
+  }
+  .movie__select-title {
+    font-size: 18px;
+  }
+  .movie__select-select {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: $breakpoint420) {
+  .movie__select {
+    padding: 30px 10px;
+    font-size: 13px;
+  }
+  .movie__select-title {
+    font-size: 15px;
+  }
+  .movie__select-select option {
+    font-size: 12px !important;
+  }
+}
