@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/world-tv/static/css/main.9e151134.css",
-    "main.js": "/world-tv/static/js/main.9b8bacb3.js",
+    "main.js": "/world-tv/static/js/main.958a0348.js",
     "static/media/john-wick.webm": "/world-tv/static/media/john-wick.af1018a0c8a7f52d6ab4.webm",
     "static/media/joker.jpg": "/world-tv/static/media/joker.84ac052dec1a806765f9.jpg",
     "static/media/remixicon.svg?t=1590207869815": "/world-tv/static/media/remixicon.9cedd2150922ead84869.svg",
@@ -44,10 +44,10 @@
     "static/media/sony.webp": "/world-tv/static/media/sony.ad6a917af04c16c12802.webp",
     "static/media/devices.svg": "/world-tv/static/media/devices.66cddb9a4e177961cc62131a63be86c3.svg",
     "main.9e151134.css.map": "/world-tv/static/css/main.9e151134.css.map",
-    "main.9b8bacb3.js.map": "/world-tv/static/js/main.9b8bacb3.js.map"
+    "main.958a0348.js.map": "/world-tv/static/js/main.958a0348.js.map"
   },
   "entrypoints": [
     "static/css/main.9e151134.css",
-    "static/js/main.9b8bacb3.js"
+    "static/js/main.958a0348.js"
   ]
 }
