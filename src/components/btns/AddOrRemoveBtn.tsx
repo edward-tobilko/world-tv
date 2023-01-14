@@ -4,6 +4,7 @@ import { useAppSelector } from "../../redux/store";
 
 const AddOrRemoveBtn = ({ DATA }: any) => {
   const { favorites } = useAppSelector((state) => state.movie);
+
   const { addFavoriteMovie, removeFavoriteMovie } = useActions();
 
   const isItemInBasket = favorites.some((item) => item.id === DATA?.id);
@@ -14,7 +15,7 @@ const AddOrRemoveBtn = ({ DATA }: any) => {
     event.stopPropagation();
 
     if (isItemInBasket) {
-      removeFavoriteMovie(DATA.id);
+      removeFavoriteMovie(DATA?.id);
     } else {
       addFavoriteMovie(DATA);
     }

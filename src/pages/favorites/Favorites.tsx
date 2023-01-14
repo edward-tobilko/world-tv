@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./favorites.scss";
 
 import { useAppSelector } from "../../redux/store";
@@ -6,7 +6,7 @@ import FilmsPageItem from "../films/FilmsPageItem";
 
 const Favorites = () => {
   const { favorites } = useAppSelector((state) => state.movie);
-  const [isFavorite, setIsFavorite] = useState(favorites);
+  // const [isFavorite, setIsFavorite] = useState(favorites);
 
   return (
     <div className="container">
@@ -20,10 +20,10 @@ const Favorites = () => {
           {favorites?.map((movie: any, index: number) => (
             <>
               <FilmsPageItem
-                key={index}
+                key={movie?.id}
                 item={movie}
-                isFavorite={isFavorite}
-                setIsFavorite={setIsFavorite}
+                // isFavorite={isFavorite}
+                // setIsFavorite={setIsFavorite}
               />
             </>
           ))}

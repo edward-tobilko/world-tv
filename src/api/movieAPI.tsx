@@ -16,7 +16,7 @@ export const movieAPI = createApi({
     prepareHeaders: (headers) => {
       headers.set(
         "X-RapidAPI-Key",
-        "913ba78a9emsh9d52c38c867927dp1b0a39jsn94e9f3f6ecf0", // your api key
+        "d00dc11254msha8ff62bb9a7f140p12a942jsne1faea45ec56", // your api key
       );
 
       return headers;
