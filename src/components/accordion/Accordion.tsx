@@ -1,8 +1,10 @@
 import { useState } from "react";
+
 import "./accordion.scss";
 
-import AccordionItem from "./AccordionItem";
 import { IAccordionData } from "../../models";
+
+import AccordionItem from "./AccordionItem";
 
 const Accordion = ({
   accordionData,

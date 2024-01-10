@@ -24,7 +24,7 @@ const Auth = () => {
           <div className="auth__form-container-field">
             <label>Name:</label>
             <input
-              type="text"
+              type="text" //? 1992eduard777clone@gmail.com
               placeholder="Enter Name"
               name="name"
               required
@@ -35,7 +35,7 @@ const Auth = () => {
           <div className="auth__form-container-field">
             <label>Password:</label>
             <input
-              type="password"
+              type="password" //? 1q2w3e4r
               placeholder="Enter Password"
               name="psw"
               required
@@ -45,7 +45,10 @@ const Auth = () => {
           </div>
           <div className="auth__form-container-field">
             <span className="psw">
-              Forgot <a href="https://www.google.com/">password?</a>
+              Forgot
+              <a href="https://www.google.com/" target="blank">
+                password?
+              </a>
             </span>
           </div>
           <div className="auth__form-container-field">

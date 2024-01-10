@@ -23,7 +23,7 @@ const Search = () => {
     isFetching: isFetchingSearch,
     isError: isErrorSearch,
   } = useGetSearchMoviesQuery(delayInputText, {
-    skip: delayInputText.length < 2, // under what conditions we don't need to make the request
+    skip: delayInputText.length < 2, //? Under what conditions we don't need to make the request
   });
 
   useEffect(() => {
